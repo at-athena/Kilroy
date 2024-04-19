@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/happy-marker" rel="stylesheet">
+    <title>$Kilroy</title>
+    <style>
+    @import url('https://fonts.cdnfonts.com/css/happy-marker');
+        body {
+            font-family: 'Happy Marker', sans-serif;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            background-color: #ECECEC;
+        }
+
+        nav {
+            background-color: black;
+            padding: 0.3vw 0; /* Use vw for padding */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 1000; /* Ensure the navbar is above other elements */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 2vw; /* Use vw for margin */
+            font-size: 2vw; /* Use vw for font size */
+        }
+
+        nav a:hover {
+            color: #ffd700; /* Change to a fun color when hovered */
+        }
+
+        .content {
+            text-align: center;
+            height: 100%;
+            padding-top: 7vw; /* Adjusted padding for content */
+        }
+
+        .content::before {
+            content: ''; /* Create an empty element */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; /* Cover the entire content container */
+            background-repeat: no-repeat;
+            background-size: cover; /* Adjust the background image size */
+            background-position: center; /* Center the background image */
+            opacity: 0.5; /* Set the opacity to make the background more transparent */
+            z-index: -1; /* Place the overlay behind the content */
+            background-attachment: fixed; /* Makes the background image sticky */
+        }
+
+        h1 {
+            color: black;
+            font-size: 4vw; /* Use vw for font size */
+        }
+
+        p {
+            color: #333;
+            font-size: 3vw; /* Use vw for font size */
+        }
+
+        #logo {
+            display: block;
+            margin: 1vw auto; /* Use vw for margin */
+            max-width: 40%; /* Adjust the width as needed */
+            height: auto;
+        }
+
+        .curved-square {
+            width: 70%; /* Set the width as needed */
+            background-color: black; /* Background color of the square */
+            border-radius: 15px; /* Rounded corners */
+            display: flex; /* Use flexbox to center the text and image */
+            flex-direction: column; /* Arrange content in a column */
+            justify-content: center; /* Center the text and image horizontally */
+            align-items: center; /* Center the text and image vertically */
+            font-family: 'Happy Marker', sans-serif;/* Fun font */
+            color: green; /* Font color */
+            border: 10px solid black; /* Border around the square */
+            margin: auto; /* Center the square */
+        }
+
+        .curved-square img {
+            width: 100%; /* Adjust the width to fit the curved square */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 15px; /* Same border-radius as the curved square */
+            margin-left: 30px; 
+            margin-right: 30px; 
+            
+        }
+
+        .curved-square p {
+            font-size: 3vw;
+        }
+
+.column {
+  float: left;
+  width: 22%;
+  padding: 1%;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+    @media screen and (max-width: 700px) {
+    
+        #logo {
+            display: block;
+            margin: 1vw auto; /* Use vw for margin */
+            max-width: 80%; /* Adjust the width as needed */
+            height: auto;
+        }
+
+        nav {
+            background-color: #54A902;
+            padding: 2vw 0; /* Use vw for padding */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 1000; /* Ensure the navbar is above other elements */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 2vw; /* Use vw for margin */
+            font-size: 3vw; /* Use vw for font size */
+        }
+
+        nav a:hover {
+            color: #ffd700; /* Change to a fun color when hovered */
+        }
+
+        
+        p {
+            color: #333;
+            font-size: 4vw; /* Use vw for font size */
+        }
+
+        h1{
+            font-size: 6vw;
+        }
+
+        .curved-square {
+            width: 80%; /* Set the width as needed */
+            background-color: black; /* Background color of the square */
+            border-radius: 15px; /* Rounded corners */
+            display: flex; /* Use flexbox to center the text and image */
+            flex-direction: column; /* Arrange content in a column */
+            justify-content: center; /* Center the text and image horizontally */
+            align-items: center; /* Center the text and image vertically */
+            font-family: 'Happy Marker', sans-serif; /* Fun font */
+            color: green; /* Font color */
+            border: 10px solid black; /* Border around the square */
+            margin: auto; /* Center the square */
+        }
+
+        .curved-square p {
+            font-size: 5vw;
+        }
+
+        .column {
+            float: left;
+            width: 22%;
+            padding: 1%;
+        }
+
+        body {
+            background-color: lightblue; 
+        }
+    
+
+}
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#logo">Home</a>
+        <a href="#">Telegram</a>
+        <a style="font-size: 4vw; color: white; text-shadow: 2px 2px 0px gray"><b>$Kilroy</b></a>
+        <a href="#">Dexscreener</a>
+        <a href="https://twitter.com/Boobasolana" target="_blank">Twitter</a>
+    </nav>
+
+    <div class="content" style="min-height: 300px;">
+        <img src="meme1.jpg" alt="Booba Logo" id="logo" style="margin-top: 70px;">
+        <h1 id="home">Welcome to $Kilroy</h1>
+        <p><b>Where laughter never ends and silliness reigns supreme</b></p>
+        <p><b>Contract Address:</b></p>
+
+        <div class="socials" style="display: flex; justify-content: center; gap: 20px;">
+          <!-- Twitter clickable image -->
+          <a href="https://twitter.com/Boobasolana" target="_blank">
+              <img src="twitter.png" alt="Twitter" style="width: 100px; height: 100px; border-radius: 50%;">
+          </a>
+          
+          <!-- Telegram clickable image -->
+          <a href="https://telegram.org/" target="_blank">
+              <img src="telegram.png" alt="Telegram" style="width: 100px; height: 100px; border-radius: 50%;">
+          </a>
+      </div>
+
+
+      <div style="text-align:center; color: green; ">
+        <h1>More of $Kilroy</h1>
+        <p>Click on the images below</p>
+      </div>
+      
+      <!-- The four columns -->
+      <div class="row">
+        <div class="column">
+          <img src="meme2.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="meme1.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="meme4.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="meme3.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+        </div>
+      </div>
+      
+      <div class="container">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" style="width:100%">
+        <div id="imgtext"></div>
+      </div>
+      
+      <script>
+      function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+      }
+      </script>
+      
+        <div>
+            <h1 style="font-family: 'Happy Marker', sans-serif; color: white; padding: 10px; text-shadow: 4px 4px 0px black, -2px -2px 0px white, 2px -2px 0px white, -2px 2px 0px white;">
+                The story of Booba
+            </h1>
+
+            <div class="curved-square">
+                <p style="color: white; text-shadow: 2px 2px 0px black; ">In the midst of World War II, soldiers from the United States found comfort in small moments of creativity and humor. One such outlet was the creation of the graffiti doodle, "Kilroy Was Here," which depicted a bald man with his nose hanging over a wall and his hands clutching the top. This drawing, accompanied by the phrase "Kilroy was here," became an emblematic mark of the soldiers' presence as they journeyed through war-torn landscapes, offering a lighthearted yet enduring sign of their passage.</p>
+                <img src="meme6.jpg" alt="Meme Image"> <!-- This is the image inside the curved square -->
+            </div>
+              <br><br><br>
+            <div class="curved-square">
+              <p style="color: white; text-shadow: 2px 2px 0px black; ">As the soldiers moved across the world, the phrase and doodle spread, becoming an unofficial calling card of the troops and a symbol of their shared experiences. It represented the unity, resilience, and good-natured humor that characterized the soldiers' camaraderie in the face of adversity. Though Kilroy's origins may have been modest, his impact grew far beyond the battlefield, becoming a lasting symbol of the human spirit during wartime.
+                 </p>
+              <img src="meme2.jpg" alt="Meme Image"> <!-- This is the image inside the curved square -->
+          </div>
+          <br><br><br>
+          <div class="curved-square">
+            <p style="color: white; text-shadow: 2px 2px 0px black; ">Long after the war, "Kilroy Was Here" continued to resonate as a cultural touchstone, a reminder of the trials and triumphs of those who served. The phrase and doodle captured the essence of a moment in history, immortalizing the resilience and hope of a generation and serving as a bridge to future generations, allowing them to connect with the shared experiences of the past.</p>
+            <img src="meme3.jpg" alt="Meme Image"> <!-- This is the image inside the curved square -->
+         
+          </div>
+          <br><br>
+        </div>
+
+        <div style="padding: 5px;width: 100%; background-color: black;">
+          <p style="text-align: center; color: white;">$Kilroy</p>
+        </div>
+    </div>
+</body>
+
+</html>
